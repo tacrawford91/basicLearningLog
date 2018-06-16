@@ -1,0 +1,31 @@
+{
+  "name": "basiclearninglog",
+  "version": "1.0.0",
+  "description": "Track Learning/Coding Activities",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tacrawford91/basicLearningLog.git"
+  },
+  "author": "Troy A. Crawford",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tacrawford91/basicLearningLog/issues"
+  },
+  "homepage": "https://github.com/tacrawford91/basicLearningLog#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.3",
+    "path": "^0.12.7",
+    "pg": "^7.4.3",
+    "sequelize": "^4.37.10"
+  }
+}
