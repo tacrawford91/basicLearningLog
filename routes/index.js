@@ -6,7 +6,7 @@
     const db = require('../db/models');
 
 
-    // router.use('/api', apiRoutes);
+    router.use('/api', apiRoutes);
     router.use('/', htmlRoutes);
 
     module.exports = router;

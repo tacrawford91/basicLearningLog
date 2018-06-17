@@ -1,41 +1,110 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Troy A. Crawford</h1>
+    <p class="lead">Hello! I have built this basic log to be a centralized location to hold all of my new found knoledge. Below I break down the concepts to the day's main take away. Please feel free to ask questions or commment below. When WE all learn, WE all win! </p>
+    <hr class="jumbohr">
+  </div>
+</div>
 
 <div class="container">
-    <div class="col-lg-2"></div>
-    <div class="col-lg-10">
-        <form>
-        <div class="form-group">
-            <label for="Date">Date</label>
-            <input type="date" class="form-control" placeholder="">
+    {{#each data}}
+        <div class="card" id= {{id}} style="width: 25rem;">
+            <img class="card-img-top" src={{imageURL}} alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{day}}</h5>
+                <p class="card-text">{{summary}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{language}}</li>
+                <li class="list-group-item">{{skill}}</li>
+            </ul>
+            <div class="card-body">
+                <p>{{description}}</p>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="skill">Language</label>
-            <select class="form-control">
-            <option>HTML</option>
-            <option>CSS</option>
-            <option>JavaScript</option>
-            <option>Ruby</option>
-            <option>Job</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="skill">Skill</label>
-            <select class="form-control">
-            <option>Fundementals</option>
-            <option>Framework</option>
-            <option>Project</option>
-            <option>Job</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="summary">Summary</label>
-            <textarea class="form-control" rows="2"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="Description">Full Description</label>
-            <textarea class="form-control" rows="4"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </div>
-    <div class="col-lg-2"></div>
+    {{/each}}
 </div>
+
+
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newEntry">
+  Add New Entry
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="newEntry" tabindex="-1" role="dialog" aria-labelledby="newEntryTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newEntryTitle">New Entry</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    <div class="container">
+        <div class="col-lg-12">
+            <form>
+            <div class="form-group">
+                <label for="Date">Date</label>
+                <input type="date" class="form-control" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="skill">Language</label>
+                <select class="form-control">
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JavaScript</option>
+                <option>Ruby</option>
+                <option>Job</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="skill">Skill</label>
+                <select class="form-control">
+                <option>Fundementals</option>
+                <option>Framework</option>
+                <option>Project</option>
+                <option>Job</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="summary">Summary</label>
+                <textarea class="form-control" rows="2"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="Description">Full Description</label>
+                <textarea class="form-control" rows="4"></textarea>
+            </div>
+            </form>
+        </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Add </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
