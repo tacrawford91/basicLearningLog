@@ -2,14 +2,16 @@
   <div class="container">
     <h1 class="display-4">Troy A. Crawford</h1>
     <p class="lead">Hello! I have built this basic log to be a centralized location to hold all of my new found knoledge. Below I break down the concepts to the day's main take away. Please feel free to ask questions or commment below. When WE all learn, WE all win! </p>
-    <hr class="jumbohr">
+    <hr class="jumbohr"></hr>
   </div>
 </div>
 
 <div class="container">
+    <div class="row">
     {{#each data}}
-        <div class="card" id= {{id}} style="width: 25rem;">
-            <img class="card-img-top" src={{imageURL}} alt="Card image cap">
+        <div class="col-md-6 col-lg-6">
+            <div class="card cardStyle" id={{id}}>
+            <img class="card-img cardImg" src={{imageURL}} alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">{{day}}</h5>
                 <p class="card-text">{{summary}}</p>
@@ -21,10 +23,11 @@
             <div class="card-body">
                 <p>{{description}}</p>
             </div>
+            </div>
         </div>
     {{/each}}
+    </div>
 </div>
-
 
 
 
@@ -89,6 +92,7 @@
     </div>
   </div>
 </div>
+
 
 
 

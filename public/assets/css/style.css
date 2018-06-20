@@ -1,0 +1,10 @@
+.cardStyle {
+    margin-top: 30px;
+    text-align: center;
+    border: solid;
+}
+
+.cardImg {
+    max-width: 300px;
+    margin: 0 auto;
+}
