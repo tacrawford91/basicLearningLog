@@ -3,7 +3,7 @@ module.exports = function(sequelize, DataTypes) {
       day: DataTypes.STRING,
       skill: DataTypes.STRING,
       summary: DataTypes.STRING(1234),
-      description: DataTypes.STRING,
+      description: DataTypes.STRING(1234),
       imageURL: DataTypes.STRING(1234),
       language: DataTypes.STRING
     });
