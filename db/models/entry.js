@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
       skill: DataTypes.STRING,
       summary: DataTypes.STRING(1234),
       description: DataTypes.STRING,
-      imageURL: DataTypes.STRING,
+      imageURL: DataTypes.STRING(1234),
       language: DataTypes.STRING
     });
     return Entry;
