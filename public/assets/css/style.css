@@ -50,6 +50,9 @@
     border: solid;
 }
 
+.description {
+    text-align: left
+}
 .cardImg {
     max-width: 330px;
     margin: 0 auto;
