@@ -16,40 +16,42 @@
         </div>
         </div>
         <div class="col-sm-6 col-md-8 col-lg-8">
-        {{#each data}}
-                <div class="card cardStyle" id="card{{id}}">
-                <img class="card-img cardImg" src={{imageURL}} alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title"><strong>{{day}}</strong></h5>
-                    <p class="card-text"><strong>Learning Summary:</strong> {{summary}}</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><strong>Language Focus:</strong> {{language}}</li>
-                    <li class="list-group-item"><strong>Skill Focus:</strong> {{skill}}</li>
-                </ul>
-                {{!-- <div class="card-body">
-                    <h3>Description:</h3>
-                    <p>{{description}}</p> --}}
-                {{!-- </div> --}}
-                <div id="accordion">
-                    <div class="card">
-                      <div class="card-header" id="card{{id}}">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link" data-toggle="collapse" data-target="#{{id}}" aria-expanded="true" aria-controls="{{id}}">
-                            Full Description
-                          </button>
-                        </h5>
-                      </div>
+        <div id="buttonsDiv">
+           <h3>Filter By Language:</h3>
+           <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+           <button class="btn" onclick="filterSelection('Ruby')">Ruby</button>
+           <button class="btn" onclick="filterSelection('Dart')">Dart</button>
+        </div>
+            {{#each data}}
+                    <div class="card cardStyle filterDiv {{language}}" id="card{{id}}">
+                    <img class="card-img cardImg" src={{imageURL}} alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>{{day}}</strong></h5>
+                        <p class="card-text"><strong>Learning Summary:</strong> {{summary}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Language Focus:</strong> {{language}}</li>
+                        <li class="list-group-item"><strong>Skill Focus:</strong> {{skill}}</li>
+                    </ul>
+                    <div id="accordion">
+                        <div class="card">
+                          <div class="card-header" id="card{{id}}">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link" data-toggle="collapse" data-target="#{{id}}" aria-expanded="true" aria-controls="{{id}}">
+                                Full Description
+                              </button>
+                            </h5>
+                          </div>
 
-                      <div id="{{id}}" class="collapse" aria-labelledby="{{id}}" data-parent="#accordion">
-                        <div class="card-body description">
-                          {{{description}}}
+                          <div id="{{id}}" class="collapse" aria-labelledby="{{id}}" data-parent="#accordion">
+                            <div class="card-body description">
+                              {{{description}}}
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-        {{/each}}
+            {{/each}}
         </div>
         </div>
 </div>
