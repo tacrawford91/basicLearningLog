@@ -1,8 +1,19 @@
 
 .jumbotron {
     padding: 1rem;
+    padding-top: 0;
     padding-bottom: 0;
 }
+/* My Name in Jumbrotron */
+.display-4 {
+    font-size: 2.5rem;
+}
+/* welcome paragraph */
+p.lead {
+    margin-bottom:0;
+}
+
+
 .card-header {
     background: #1e15ad14;
 }
