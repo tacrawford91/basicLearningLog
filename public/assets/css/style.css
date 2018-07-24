@@ -1,6 +1,7 @@
 
 .jumbotron {
-    padding: 2rem;
+    padding: 1rem;
+    padding-bottom: 0;
 }
 .card-header {
     background: #1e15ad14;
