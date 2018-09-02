@@ -3,16 +3,18 @@
     const router = require('express').Router();
     // Requiring models
     const db = require('../db/models');
+    //cors
+    var cors = require('cors');
 
 
    //get One
-   router.get('/get/:id', (req,res) => {
+   router.get('/get/:id', cors(), (req,res) => {
        db.Entry.findById(req.params.id)
        .then((data) => res.json(data));
    });
 
     //get all entries
-    router.get('/getAll', (req,res) => {
+    router.get('/getAll', cors(), (req,res) => {
         db.Entry.findAll({order:[['createdAt','DESC']]})
         .then((data) => {
             res.json(data);
