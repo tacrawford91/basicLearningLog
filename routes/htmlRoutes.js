@@ -29,7 +29,6 @@
             hbsObject = {
                 data: newData
             };
-            console.log('handlebar object', hbsObject);
         }).then( () => {res.render("index", hbsObject)}).catch((err) => console.log(`rendering THE IS ERROR IS THE FOLLOWING: ${err}`));      
      }); 
     
