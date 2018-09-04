@@ -8,7 +8,7 @@
 
 
    //get One
-   router.get('/get/:id', (req,res) => {
+   router.get('/entry/:id', (req,res) => {
        db.Entry.findById(req.params.id)
        .then((data) => res.json(data));
    });
