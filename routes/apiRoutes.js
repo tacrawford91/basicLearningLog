@@ -22,7 +22,7 @@
    });
    
     //Create New Entry
-    router.post('/newEntry', (req,res) => {
+    router.post('/newEntry', cors(), (req,res) => {
         db.Entry.create(req.body).then((newEntry) => {res.send(newEntry)}).catch((err) => {if (err) throw err})
     });
 
