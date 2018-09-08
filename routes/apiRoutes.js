@@ -3,8 +3,6 @@
     const router = require('express').Router();
     // Requiring models
     const db = require('../db/models');
-    //cors
-    var cors = require('cors');
 
 
    //get One
