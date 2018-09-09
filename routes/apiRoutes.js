@@ -26,9 +26,8 @@
 
    //Delete Entry
     router.delete('/entry/:id', (req,res) => {
-    db.Entry.destroy(req.params.id)
-    .then((data) => res.json(data))
-    .catch((e) => { console.log(e); res.send(e)});
+    db.Entry.destroy({where: {id: req.params.id}})
+    .then((data) => res.json(data));
     });
 
 
