@@ -24,6 +24,11 @@
         db.Entry.create(req.body).then((newEntry) => {res.send(newEntry)}).catch((err) => {if (err) throw err})
     });
 
+   //Delete Entry One
+   router.delete('/entry/:id', (req,res) => {
+    db.Entry.destroy(req.params.id)
+    .then((data) => res.json(data));
+    });
 
 
     module.exports = router;
